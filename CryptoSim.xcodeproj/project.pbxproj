@@ -16,6 +16,15 @@
 		620028522778BB5900F44F1A /* CryptoSimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620028512778BB5900F44F1A /* CryptoSimTests.swift */; };
 		6200285C2778BB5900F44F1A /* CryptoSimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6200285B2778BB5900F44F1A /* CryptoSimUITests.swift */; };
 		6200285E2778BB5900F44F1A /* CryptoSimUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6200285D2778BB5900F44F1A /* CryptoSimUITestsLaunchTests.swift */; };
+		6200286C2778BBC200F44F1A /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6200286B2778BBC200F44F1A /* api.swift */; };
+		620028702778BF4700F44F1A /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6200286F2778BF4700F44F1A /* data.swift */; };
+		620028722778BF7500F44F1A /* coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620028712778BF7500F44F1A /* coin.swift */; };
+		620028742778C27700F44F1A /* NavTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620028732778C27700F44F1A /* NavTabView.swift */; };
+		620028762778C33700F44F1A /* CoinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620028752778C33700F44F1A /* CoinList.swift */; };
+		621412582778DDC700513334 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 621412572778DDC700513334 /* URLImage */; };
+		6214125A2778DDC700513334 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 621412592778DDC700513334 /* URLImageStore */; };
+		6214125C2778E6AF00513334 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6214125B2778E6AF00513334 /* ProfileView.swift */; };
+		621412632779089F00513334 /* RoundDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621412622779089F00513334 /* RoundDouble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,13 @@
 		620028572778BB5900F44F1A /* CryptoSimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoSimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6200285B2778BB5900F44F1A /* CryptoSimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSimUITests.swift; sourceTree = "<group>"; };
 		6200285D2778BB5900F44F1A /* CryptoSimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSimUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6200286B2778BBC200F44F1A /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		6200286F2778BF4700F44F1A /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		620028712778BF7500F44F1A /* coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coin.swift; sourceTree = "<group>"; };
+		620028732778C27700F44F1A /* NavTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTabView.swift; sourceTree = "<group>"; };
+		620028752778C33700F44F1A /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; };
+		6214125B2778E6AF00513334 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		621412622779089F00513334 /* RoundDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundDouble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6214125A2778DDC700513334 /* URLImageStore in Frameworks */,
+				621412582778DDC700513334 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +116,12 @@
 		6200283A2778BB5700F44F1A /* CryptoSim */ = {
 			isa = PBXGroup;
 			children = (
+				621412612779089100513334 /* extensions */,
+				6214125D2778E8D000513334 /* ViewModel */,
+				6200286E2778BC0800F44F1A /* views */,
+				6200286D2778BC0100F44F1A /* model */,
+				6200286A2778BBAF00F44F1A /* API */,
 				6200283B2778BB5700F44F1A /* CryptoSimApp.swift */,
-				6200283D2778BB5700F44F1A /* ContentView.swift */,
 				6200283F2778BB5900F44F1A /* Assets.xcassets */,
 				620028442778BB5900F44F1A /* Persistence.swift */,
 				620028462778BB5900F44F1A /* CryptoSim.xcdatamodeld */,
@@ -133,6 +155,49 @@
 			path = CryptoSimUITests;
 			sourceTree = "<group>";
 		};
+		6200286A2778BBAF00F44F1A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6200286B2778BBC200F44F1A /* api.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6200286D2778BC0100F44F1A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6200286F2778BF4700F44F1A /* data.swift */,
+				620028712778BF7500F44F1A /* coin.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6200286E2778BC0800F44F1A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6200283D2778BB5700F44F1A /* ContentView.swift */,
+				620028732778C27700F44F1A /* NavTabView.swift */,
+				620028752778C33700F44F1A /* CoinList.swift */,
+				6214125B2778E6AF00513334 /* ProfileView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		6214125D2778E8D000513334 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		621412612779089100513334 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				621412622779089F00513334 /* RoundDouble.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +214,10 @@
 			dependencies = (
 			);
 			name = CryptoSim;
+			packageProductDependencies = (
+				621412572778DDC700513334 /* URLImage */,
+				621412592778DDC700513334 /* URLImageStore */,
+			);
 			productName = CryptoSim;
 			productReference = 620028382778BB5700F44F1A /* CryptoSim.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +290,9 @@
 				Base,
 			);
 			mainGroup = 6200282F2778BB5700F44F1A;
+			packageReferences = (
+				621412562778DDC700513334 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 620028392778BB5700F44F1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,8 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6200286C2778BBC200F44F1A /* api.swift in Sources */,
+				620028702778BF4700F44F1A /* data.swift in Sources */,
+				6214125C2778E6AF00513334 /* ProfileView.swift in Sources */,
+				620028742778C27700F44F1A /* NavTabView.swift in Sources */,
 				620028482778BB5900F44F1A /* CryptoSim.xcdatamodeld in Sources */,
 				620028452778BB5900F44F1A /* Persistence.swift in Sources */,
+				621412632779089F00513334 /* RoundDouble.swift in Sources */,
+				620028722778BF7500F44F1A /* coin.swift in Sources */,
+				620028762778C33700F44F1A /* CoinList.swift in Sources */,
 				6200283E2778BB5700F44F1A /* ContentView.swift in Sources */,
 				6200283C2778BB5700F44F1A /* CryptoSimApp.swift in Sources */,
 			);
@@ -587,6 +666,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		621412562778DDC700513334 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		621412572778DDC700513334 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 621412562778DDC700513334 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		621412592778DDC700513334 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 621412562778DDC700513334 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		620028462778BB5900F44F1A /* CryptoSim.xcdatamodeld */ = {

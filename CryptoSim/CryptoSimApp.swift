@@ -13,7 +13,7 @@ struct CryptoSimApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavTabView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
